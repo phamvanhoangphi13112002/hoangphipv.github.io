@@ -63,11 +63,11 @@
   <!-- End Header Section -->
 
 
-    <div class="st-page-heading st-dynamic-bg" data-src="assets/img/blog/Superstore/header.png">
+    <div class="st-page-heading st-dynamic-bg mobile-version-img" data-src="assets/img/blog/Superstore/header.png">
       <div class="container">
         <div class="st-page-heading-in text-center">
           <h1 class="st-page-heading-title" >SALE ANALYSIS FOR SUPERSTORE</h1>
-          <h2>Using SSIS (ETL), SQL (Analysis), Power BI (Visualization), Tableau (Forecasting) & Python (Cleaning and Build Predictive Model) </h2>
+          <h2 class ="mobile-version">Using SSIS (ETL), SQL (Analysis), Power BI (Visualization), Tableau (Forecasting) & Python (Cleaning and Build Predictive Model) </h2>
           <div class="st-post-label">
             <span>By <a href="#">Hoang Phi</a></span>
             <span>2023</span>
@@ -96,15 +96,18 @@
             </blockquote>
             <h2 id="section1" style="justify-content: center; text-align:center; margin-bottom:1em; margin-top:2em" >The Data Source</h2>
             <blockquote style="font-size: 18px;">
-              <p style="text-align:justify;">This is a data set about <span>a global store</span>, recording customer transactions from <span>2014 to 2017</span> . This is an extremely complete sample data set for learning and practicing Business Intelligence and Analysis processes. This data set is in .xlsx file format and has 3 sheets: <span style="font-weight: bold; color:white">"Orders", "Returns" and "People"</span>, but in this project, I will only use 2 sheets, <span style="color: #fec544; font-weight:bold">"Orders", "Returns"</span>.</p>
+              <p >This is a data set about <span>a global store</span>, recording customer transactions from <span>2014 to 2017</span> . This is an extremely complete sample data set for learning and practicing Business Intelligence and Analysis processes. This data set is in .xlsx file format and has 3 sheets: <span style="font-weight: bold; color:white">"Orders", "Returns" and "People"</span>, but in this project, I will only use 2 sheets, <span style="color: #fec544; font-weight:bold">"Orders", "Returns"</span>.</p>
             </blockquote>
             <div class="grid-container22">
               <div class="column3">
                 
-                <img src="assets/img/blog/Superstore/data_sheet1.png" alt="Ảnh 1">
+                <img class="st-zoom-in" src="assets/img/blog/Superstore/data_sheet1.png" alt="Ảnh 1">
+                <div class="column3">
+                  <p style="text-align:center; color:#fec544; font-weight:bold"> Sheet: Orders </p>
+                </div>
               </div>
               <div class="column3">
-                <img src="assets/img/blog/Superstore/data_sheet2.png" alt="Ảnh 1">
+                <img class="st-zoom-in" src="assets/img/blog/Superstore/data_sheet2.png" alt="Ảnh 1">
               </div>
             </div>
             <div class="grid-container22" style="margin-top:20px">
@@ -135,11 +138,11 @@
   <div class="grid-container21">
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/salesbr.avif" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/salesbr.avif" alt="Ảnh 1">
     </div>
     <div class="column3">
       <p > 
-        <ul style="color:white; text-align:justify">
+        <ul style="color:white;font-weight:400">
           <li>Analysis of the general business situation of the store with some sale metrics such as <span style="color: #fec544;">YTD Total Sales, YTD Total Profit, YTD Quantity Sold, Best Seller, ...</span>.</li>
           <li>When a business conducts YTD analysis, they are <span style="color: #fec544;">reviewing and evaluating</span> their <span style="color: #fec544;">performance, financial status</span>, or other data from the beginning of the year up to the current point <span style="color:#fec544">in the same fiscal year or statistical period</span>.</li>
         </ul> </p>
@@ -150,7 +153,7 @@
     
     <div class="column3">
       <p > 
-        <ul style="color:white; text-align:justify">
+        <ul style="color:white; font-weight:400 ">
           <li><span style="color: #fec544;">Recency (R)</span>: How recently did the customer make a purchase?
           </li>
           <li><span style="color: #fec544;">Frequency (F)</span>: How often does the customer make purchases within a specific timeframe?</li>
@@ -159,18 +162,18 @@
     </div>
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/rfmbr.png" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/rfmbr.png" alt="Ảnh 1">
     </div>
   </div>    
   <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> Customer Cohort Analysis </p>
   <div class="grid-container21">
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/cohortbr.jpg" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/cohortbr.jpg" alt="Ảnh 1">
     </div>   
     <div class="column3">
       <p > 
-        <ul style="color:white; text-align:justify">
+        <ul style="color:white;font-weight:400">
          
           <li>
             Cohort analysis is a method that <span style="color: #fec544;">categorizes users</span> based on common attributes and studies <span style="color: #fec544;">their behavior trends</span> over time, revealing insights into <span style="color: #fec544;">group-specific patterns and performance</span>.</li>
@@ -182,15 +185,16 @@
   <div class="grid-container21">
     
     <div class="column3">
-      <p > 
-        <ul style="color:white; text-align:justify">
+       
+        <ul style="color:white;font-weight:400 ">
           
           <li>Forecasting in businesses <span style="color: #fec544;">involves predicting and estimating</span> the future using <span style="color: #fec544;">historical and current data</span> to support strategic decision-making, financial planning, and resource management.</li>
           <li>By examining past sales data, the company can <span style="color:#fec544">identify patterns and trends</span> that provide insights into future sales performance. </li>
+        </ul>
         </div>
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/Forecasting.jpg" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/Forecasting.jpg" alt="Ảnh 1">
     </div>
   </div> 
             <!-- <blockquote>View my full project: <a href="https://github.com/phamvanhoangphi13112002/CustomerSegmentation-RFMAnalysis" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote> -->
@@ -212,10 +216,10 @@
   <div class="grid-container21">
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/datainfo.PNG" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/datainfo.PNG" alt="Ảnh 1">
     </div>
     <div class="column3">
-      <img src="assets/img/blog/Superstore/datanull.PNG" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/datanull.PNG" alt="Ảnh 1">
     </div>
   </div>
   <div class="grid-container21" style="margin-top: 1em;">
@@ -231,10 +235,10 @@
     <div class="grid-container21">
       <div class="column3">
         
-        <img src="assets/img/blog/Superstore/duplicated.PNG" style="height: 150px;" alt="Ảnh 1">
+        <img class="st-zoom-in hide-mobile-img-ver" src="assets/img/blog/Superstore/duplicated.PNG" style="height: 150px;" alt="Ảnh 1">
       </div>
       <div class="column3">
-        <img src="assets/img/blog/Superstore/unique.PNG" alt="Ảnh 1">
+        <img class="st-zoom-in" src="assets/img/blog/Superstore/unique.PNG" alt="Ảnh 1">
       </div>
     </div>
     <blockquote style="font-size: 18px; line-height:2em;">
@@ -289,7 +293,7 @@ df = df.drop_duplicates(keep='first')
 df['row_id'] = range(1, len(df) + 1)
 </div></div>
 <p style="text-align:center; color:#fec544; font-weight:bold; font-size:18px; margin-top:1em"> <br>Data After Clean (with 51290 Records)<br><span style="font-weight: lighter; color:azure">(Save it to new files)</span></p>
-<img src="assets/img/blog/Superstore/dataafterclean.PNG" alt="Ảnh 1">
+<img class="st-zoom-in" src="assets/img/blog/Superstore/dataafterclean.PNG" alt="Ảnh 1">
 <blockquote style="font-size: 18px; line-height:2em;"><p>Download the Data After Cleaning: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/1%20-%20Data%20Cleaning" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
             <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Design Data Warehouse</h2>
  
@@ -311,10 +315,10 @@ df['row_id'] = range(1, len(df) + 1)
   <div class="grid-container21">
     <div class="column3">
       
-      <img src="assets/img/blog/Superstore/etl_dim_customer.png" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/etl_dim_customer.png" alt="Ảnh 1">
     </div>
     <div class="column3">
-      <img src="assets/img/blog/Superstore/etl_dim_product.png" alt="Ảnh 1">
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/etl_dim_product.png" alt="Ảnh 1">
     </div>
   </div>
   <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em">Dim Time </p>
@@ -891,25 +895,16 @@ plt.show()
       <tr>
         <td>
           <ul>
-            
-              <ul>
+           
                 <li>Count of lower outliers in sales: <span>0</span></li>
                 <li>Count of upper outliers in sales: <span>5655</span></li>
                 <li>Count of upper outliers in quantity: <span>877</span></li>
                 <li>Count of upper outliers in discount: <span>4172</span></li>
-              </ul>
-            
-          </ul>
-        </td>
-        <td>
-          <ul>
-            
-              <ul>
                 <li>Count of lower outliers in profit: <span>3526</span></li>
                 <li>Count of upper outliers in profit: <span>6229</span></li>
                 <li>Count of upper outliers in shipping_cost: <span>5909</span></li>
                 <li><span>No</span> outliers in date_diff</li>
-              </ul>
+              
            
           </ul>
         </td>
@@ -1053,10 +1048,10 @@ plt.show()
       <div class="grid-container21">
         <div class="column3">
           
-          <img src="assets/img/blog/Superstore/xgboostmetric.PNG" style="height: 220px" alt="Ảnh 1">
+          <img class="st-zoom-in" src="assets/img/blog/Superstore/xgboostmetric.PNG" style="height: 220px" alt="Ảnh 1">
         </div>
         <div class="column3">
-          <img src="assets/img/blog/Superstore/xgbooscm.png" alt="Ảnh 1">
+          <img class="st-zoom-in" src="assets/img/blog/Superstore/xgbooscm.png" alt="Ảnh 1">
         </div>
       </div>      
       <div class="grid-container21" style="margin-top:20px">
@@ -1101,10 +1096,10 @@ plt.show()
           <div class="grid-container21">
             <div class="column3">
               
-              <img src="assets/img/blog/Superstore/rfcmetrics.PNG" style="height: 228px" alt="Ảnh 1">
+              <img class="st-zoom-in" src="assets/img/blog/Superstore/rfcmetrics.PNG" style="height: 228px" alt="Ảnh 1">
             </div>
             <div class="column3">
-              <img src="assets/img/blog/Superstore/rfccm.png" alt="Ảnh 1">
+              <img class="st-zoom-in" src="assets/img/blog/Superstore/rfccm.png" alt="Ảnh 1">
             </div>
           </div>      
           <div class="grid-container21" style="margin-top:20px">
@@ -1150,10 +1145,10 @@ plt.show()
           <div class="grid-container21">
             <div class="column3">
               
-              <img src="assets/img/blog/Superstore/SVCmetrics.PNG" style="height: 228px" alt="Ảnh 1">
+              <img class="st-zoom-in" src="assets/img/blog/Superstore/SVCmetrics.PNG" style="height: 228px" alt="Ảnh 1">
             </div>
             <div class="column3">
-              <img src="assets/img/blog/Superstore/svccm.png" alt="Ảnh 1">
+              <img class="st-zoom-in" src="assets/img/blog/Superstore/svccm.png" alt="Ảnh 1">
             </div>
           </div>      
           <div class="grid-container21" style="margin-top:20px">
@@ -1269,7 +1264,7 @@ print(f"Best model based on F1 Score: {best_f1_model}")
     <div class="col-lg-10 offset-md-1">
       <div class="st-post-details st-style1">
         <div class="st-social-info" >
-          <div class="st-social-text">Visits my social profile and get connected:</div>
+          <div class="st-social-text" style="line-height: 1.8em;">Visits my social profile and get connected:</div>
           <div class="st-social-link">
             <a href="https://github.com/phamvanhoangphi13112002" class="st-social-btn active" target = '_blank'>
           <span class="st-social-icon"><i class="fab fab fa-github"></i></span>

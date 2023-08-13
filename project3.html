@@ -64,7 +64,7 @@
       <div class="container">
         <div class="st-page-heading-in text-center">
           <h1 class="st-page-heading-title" >RFM WITH K-MEAN IN CUSTOMER SEGMENTATION</h1>
-          <h2>Using Python (Cleaning, Transformation, Standardization, Visualization) and K-Mean (Clustering) </h2>
+          <h2 class="mobile-version">Using Python (Cleaning, Transformation, Standardization, Visualization) and K-Mean (Clustering) </h2>
           <div class="st-post-label">
             <span>By <a href="#">Hoang Phi</a></span>
             <span>2023</span>
@@ -399,8 +399,6 @@ pd.DataFrame(rfm_data_t_scaler)
 
 <h2 style="justify-content: center; text-align:center; margin-top:3em">Using K-mean to Clustering</h2>
 <p style="text-align:center; color:#fec544; font-weight:bold; font-size:18px; margin-top:1em">Using Elbow to identify the number of cluster</p>
-<div class="grid-container21">
-  <div class="column3">
     <div id="editor-pythonelbow">
 # Use Elbow Method
 from sklearn.cluster import KMeans
@@ -416,12 +414,11 @@ plt.ylabel('SSE')
 sns.pointplot(x=list(sse.keys()), y=list(sse.values()))
 plt.show()
                               </div>  
-  </div>
-  <div class="column3">
+
+
     <img src="assets/img/blog/ProjectKmean/elbowmethod.png" alt="Ảnh 1" style="justify-content: center;">
 
-  </div>
-</div>
+
 <p style="text-align:center; color:#fec544; font-weight:bold; font-size:18px; margin-top:1em">Using Silhouette Score to identify the number of cluster</p>
 <div id="editor-pythonsilhoutte">
   # Using Silhouette Method
@@ -502,8 +499,7 @@ plt.show()
   <p> This is data <span>After</span> clustering. We can see that the <span>data is clustered.</span></p>
 </blockquote>
 <h2 style="justify-content: center; text-align:center; margin-top:3em">Group data by cluster and Analysis</h2>
-<div class="grid-container21">
-  <div class="column3">
+
     <div id="editor-pythongroupby">
       rfm_data.groupby('Cluster').agg(
         {
@@ -513,12 +509,11 @@ plt.show()
         }
     ).round(2)
                               </div>  
-  </div>
-  <div class="column3">
+
 <img src="assets/img/blog/ProjectKmean/groupby.png" alt="Ảnh 1" style="justify-content: center;">
 
-  </div>
-</div>
+
+
 <blockquote style="font-size: 18px; line-height:2em;">
   <p span style="font-size: 20px; font-weight:bold;  color:#fec544">Cluster 0 - "Loyal High-Spending Customers":
   </p>
@@ -634,7 +629,7 @@ plt.show()
 </div>
 <div class="st-height-b60 st-height-lg-b60"></div>
 <div class="st-social-info" >
-<div class="st-social-text">Visits my social profile and get connected:</div>
+<div class="st-social-text" style="line-height: 1.8em;">Visits my social profile and get connected:</div>
 <div class="st-social-link">
 <a href="https://github.com/phamvanhoangphi13112002" class="st-social-btn active" target = '_blank'>
 <span class="st-social-icon"><i class="fab fab fa-github"></i></span>

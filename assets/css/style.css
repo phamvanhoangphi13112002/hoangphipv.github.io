@@ -521,9 +521,46 @@ hr {
   .st-vertical-middle {
     display: block;
   }
+  .hide-mobile{
+    display: none;
+  }
+  .mobile-version{
+    font-size: 20px;
+  }
+  .mobile-version-img{
+    width:fit-content
+  }
+  .hide-mobile-img-ver{
+    height: 100px;
+  }
+  #editor-sql,
+  #editor-python,
+  #editor-python2,
+  #editor-pythonRFM,
+  #editor-pythonDis,
+  #editor-pythonfunction,
+  #editor-pythontrans,
+  #editor-pythonscaler,
+  #editor-pythonelbow,
+  #editor-pythontrain,
+  #editor-pythoneva,
+  #editor-pythonsilhoutte,
+  #editor-pythonviz,
+  #editor-pythoncluster,
+  #editor-pythongroupby {
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động dựa vào nội dung */
+    margin: 20px auto;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /*---Border in home
 */
+.hide-mobile-img-ver{
+  height: 150px;
+}
 .container>.st-hero-text>.borders{
   /*background-color: rgba(0, 0, 0, 0.368); */
   border-radius: 15px; 
@@ -972,6 +1009,7 @@ img>.center{
   height: 100%; /*Tùy chỉnh kích thước của ảnh để điền vào cột */
   object-fit: cover; /* Hiển thị toàn bộ hình ảnh trong phạm vi của cột */
 }
+
 .image-caption {
   position: absolute; /* Để chữ minh họa nằm chồng lên ảnh */
   bottom: 0; /* Đặt văn bản mô tả ở phía dưới ảnh */
@@ -1011,6 +1049,12 @@ img>.center{
     height: 50px;
     width: 50px;
     border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  .grid-container2,  
+  .grid-container20 {
+    grid-template-columns: 1fr; /* Chuyển về 1 cột */
   }
 }
 
