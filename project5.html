@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Laralink">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.4/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Page Title -->
+  <title>Hoàng Phi's Portfolio</title>
+  <!-- Favicon Icon -->
+  <link rel="icon" href="assets/img/Logo_phi.png" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body id="home">
+  <!-- Start Header Section -->
+  <header class="st-site-header st-style1 st-sticky-header">
+    <div class="st-main-header">
+      <div class="container">
+        <div class="st-main-header-in">
+          <div class="st-main-header-left">
+            <a class="st-site-branding" href="index.html"><img src="assets/img/logo.png" alt="Hoàng Phi"></a>
+          </div>
+          <div class="st-main-header-right">
+            <div class="st-nav">
+              <ul class="st-nav-list st-onepage-nav">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#portfolio">Achievements</a></li>
+                <li><a href="index.html#blog">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+              <div class="sp-phone">
+                <svg viewBox="0 0 513.64 513.64">
+                  <g>
+                    <g>
+                      <path d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z" />
+                    </g>
+                  </g>
+                </svg>
+                <div class="sp-phone-no">+84 905 683 764</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Section -->
+
+ <div class="st-content">
+    <div class="st-page-heading st-dynamic-bg" data-src="assets/img/blog/TeslaStock/header.webp">
+      <div class="container">
+        <div class="st-page-heading-in text-center">
+          <h1 class="st-page-heading-title" >TESLA STOCK PREDICTION</h1>
+          <h2>Using Python With Machine Learning and Deep Learning ( RNN & LSTM ) </h2>
+          <div class="st-post-label">
+            <span>By <a href="#">Hoang Phi</a></span>
+            <span>2023</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- .st-page-heading -->
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-md-1">
+          <div class="st-post-details st-style1">
+            <h2 style="justify-content: center; text-align:center; margin-bottom:1em">What is Stock Price Prediction?</h2>
+            <blockquote style="text-align:justify;font-size:18px">
+<p><span>Stock Price Prediction</span> is one of the most popular problems in the series of related problems regarding <span>Time Series data</span>. There, we will <span>use the indicators recorded in the past</span> of a stock and <span>predict its price in the future</span>, so that appropriate investment decisions can be made.</p>
+<p>For stock investors who rely on the method of technical analysis <span>(Technical Analysis)</span>, they often rely on the <span>adjusted closing price</span> of the stock to make decisions to <span>buy/sell stocks</span>. Therefore, in this project, we will <span>build a model</span> that <span>predicts</span> the <span>adjusted closing price of Tesla</span> company stock based on the indices recorded on stock trading days in the period from <span>06 /29/2010 to 03/17/2017</span>.</p>            
+</blockquote>
+            <img class="st-zoom-in" src="assets/img/blog/TeslaStock/teslastock.jpg" alt="dash1"> 
+            <h2 style="justify-content: center; text-align:center; margin-bottom:1em">Understand the Input and Output</h2>
+            <blockquote style="font-size: 18px; line-height:2em;">
+              <p>  Input / Output of this project is:
+              </p>  
+              <li><span style="color: #fec544;">Input</span>: Indexes of stocks in the <span>previous 30 trading days</span>.</li>
+              <li><span style="color: #fec544;">Output</span>: <span>Adjusted Closing Price</span> of the current day.</li>
+              
+              </blockquote>
+            <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">The Data Sources</h2>
+            <img class="st-zoom-in" src="assets/img/blog/TeslaStock/datasource.png" alt="dash1">
+            <p style="text-align:center">The time - series data <br> File data source with columns: <span style="color:#fec544;">Date, Open, High, Low, Close, Volume, Adj Close.</span></p>
+
+                      
+            <blockquote>Download dataset in my repository: <a href="https://github.com/phamvanhoangphi13112002/TeslaStockPrediction/tree/master/0%20-%20Dataset" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote>
+            <h2 style="justify-content: center; text-align:center; margin-bottom:1em">The Pipe Line</h2>
+            <img class="st-zoom-in" src="assets/img/blog/TeslaStock/thepipeline.PNG" alt="dash1">
+
+<h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Import necessary libraries and Read File</h2>
+
+<img class="st-zoom-in" src="assets/img/blog/TeslaStock/importandread.PNG" alt="dash1">
+<h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">EDA Dataset</h2>
+<p style="text-align:center; color:#fec544; font-weight:bold">df.head()</p>
+<img class="st-zoom-in" src="assets/img/blog/TeslaStock/df.head().PNG" alt="dash1">
+<p style="text-align:center; color:#fec544; font-weight:bold">df.tail()</p>
+
+<img class="st-zoom-in" src="assets/img/blog/TeslaStock/df.tail.PNG" alt="dash1">  
+<blockquote style="font-size: 18px; line-height:2em;">
+  <ul>
+    <li><span>Date:</span> Transaction date.</li>
+    <li><span>Open:</span> Opening price.</li>
+    <li><span>High:</span> The highest price of the day.</li>
+    <li><span>Low:</span> Lowest price of the day.</li>
+    <li><span>Close:</span> The closing price.</li>
+    <li><span>Volume:</span> Trading volume.</li>
+    <li><span>Adj Close:</span> Corrective closing price.</li>
+  </ul>
+  
+  
+  </blockquote> 
+<p style="text-align:center; color:#fec544; font-weight:bold">df.describe()</p>
+<img class="st-zoom-in" src="assets/img/blog/TeslaStock/describe.PNG" alt="dash1">   
+<div class="grid-container" style="margin-top:20px">
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> df.info() </p>
+  </div>
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> df.isnull().sum() </p>
+
+  </div>
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> df.duplicated().sum() </p>
+
+  </div>
+  </div>
+  <div class="grid-container">
+    <div class="column3">
+      
+      <img src="assets/img/blog/TeslaStock/info.PNG"  alt="Ảnh 1">
+    </div>
+    <div class="column3">
+      <img src="assets/img/blog/TeslaStock/null.PNG" alt="Ảnh 1">
+    </div>
+    <div class="column3">
+      <img src="assets/img/blog/TeslaStock/duplicated.PNG" style="height: 150px;" alt="Ảnh 1">
+    </div>
+  </div>
+  <p style="text-align:center; color:#fec544; font-weight:bold">Visualization </p>
+<div id="editor-python2" style="height:200px;font-size:15px">
+  <div contenteditable="false">
+# Visualization of Adjusted Closing Price of Tesla Stock
+
+plt.figure(figsize=(10, 5))
+df['Adj Close'].plot()
+plt.title('Adjusted Closing Price of Tesla Stock')
+plt.xlabel('Date')
+plt.ylabel('Adj Closing Price')
+plt.show()
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/TeslaStock/adjustclose.png" alt="dash1">
+<div id="editor-pythonRFM" style="height:200px;font-size:15px">
+  <div contenteditable="false">
+# Visualization of Volume overday of Tesla Stock
+
+plt.figure(figsize=(10, 5))
+df['Volume'].plot()
+plt.title('Volume over day of Tesla Stock')
+plt.xlabel('Date')
+plt.ylabel('Volume')
+plt.show()
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/TeslaStock/volumeviz.png" alt="dash1">
+<h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Data Preparation</h2>
+<p style="text-align:center; color:#fec544; font-weight:bold">Use Slicing Windowing Method</p>
+<img class="st-zoom-in" src="assets/img/blog/TeslaStock/window.PNG" alt="dash1">
+
+<div id="editor-pythonDis" style="height:590px;font-size:15px">
+  <div contenteditable="false">
+# Declare the Windowing function (used to create X, y pairs for time series data)
+def slicing_window(df, df_start_idx, df_end_idx, input_size, label_size, offset, label_name):
+    features = [] # Declare a list to store X
+    labels = [] # Declare a list to store y
+
+    # If df_end_idx equals the last index of the data frame, need to move down by a window size
+    if df_end_idx == None:
+        df_end_idx = len(df) - label_size - offset
+
+    df_start_idx = df_start_idx + input_size + offset
+
+    # Iterate through each data sample
+    for idx in range(df_start_idx, df_end_idx):
+        feature_start_idx = idx - input_size - offset
+        feature_end_idx = feature_start_idx + input_size
+
+        label_start_idx = idx - 1
+        label_end_idx = label_start_idx + label_size
+
+        feature = df[feature_start_idx:feature_end_idx] # Get X
+        label = df[label_name][label_start_idx:label_end_idx] # Get y
+
+        features.append(feature)
+        labels.append(label)
+
+    # Convert lists to np.ndarrays
+    features = np.array(features)
+    labels = np.array(labels)
+
+    return features, labels
+  </div></div>
+  <p style="text-align:center; color:#fec544; font-weight:bold">Split to Train / Val / Test</p>
+<div id="editor-pythontrans" style="height:170px;font-size:15px">
+  <div contenteditable="false">
+dataset_length = len(df)  # Number of data samples in the DataFrame
+TRAIN_SIZE = 0.7  # Training set ratio
+VAL_SIZE = 0.2  # Validation set ratio
+# Convert ratios to indices
+TRAIN_END_IDX = int(TRAIN_SIZE * dataset_length)
+VAL_END_IDX = int(VAL_SIZE * dataset_length) + TRAIN_END_IDX
+  </div></div>
+  <p style="text-align:center; color:#fec544; font-weight:bold">Make a function call</p>
+<div id="editor-pythonfunction" style="height:600px;font-size:15px">
+  <div contenteditable="false">
+INPUT_SIZE = 30
+LABEL_SIZE = 1
+OFFSET = 1
+BATCH_SIZE = 64
+TARGET_NAME = 'Adj Close'
+
+
+# Initialize X, y for the training set
+X_train, y_train = slicing_window(df,
+                                  df_start_idx=0,
+                                  df_end_idx=TRAIN_END_IDX,
+                                  input_size=INPUT_SIZE,
+                                  label_size=LABEL_SIZE,
+                                  offset=OFFSET,
+                                  label_name=TARGET_NAME)
+
+# Initialize X, y for the validation set
+X_val, y_val = slicing_window(df,
+                              df_start_idx=TRAIN_END_IDX,
+                              df_end_idx=VAL_END_IDX,
+                              input_size=INPUT_SIZE,
+                              label_size=LABEL_SIZE,
+                              offset=OFFSET,
+                              label_name=TARGET_NAME)
+
+# Initialize X, y for the test set
+X_test, y_test = slicing_window(df,
+                                df_start_idx=VAL_END_IDX,
+                                df_end_idx=None,
+                                input_size=INPUT_SIZE,
+                                label_size=LABEL_SIZE,
+                                offset=OFFSET,
+                                label_name=TARGET_NAME)
+  </div></div>
+
+  <p style="text-align:center; color:#fec544; font-weight:bold">Create tf.data.Dataset <br> <span style="font-weight: 400; color:white">for the convenience of training in Tensorflow</span></p>
+<div id="editor-pythonscaler" style="height: 300px;;font-size:15px">
+  <div contenteditable="false">
+# Initilize tf.data.Dataset
+
+train_ds = tf.data.Dataset.from_tensor_slices((X_train, y_train)).batch(BATCH_SIZE)
+val_ds = tf.data.Dataset.from_tensor_slices((X_val, y_val)).batch(BATCH_SIZE)
+test_ds = tf.data.Dataset.from_tensor_slices((X_test, y_test)).batch(BATCH_SIZE)
+
+# Configuring and Preparing Data
+
+AUTOTUNE = tf.data.AUTOTUNE
+train_ds = train_ds.cache().prefetch(buffer_size=AUTOTUNE)
+val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
+  </div></div>
+  <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Build Model</h2>
+  <div id="editor-pythonelbow" style="height: 1100px;;font-size:15px">
+  <div contenteditable="false">
+# Normalization layer
+
+normalize_layer = tf.keras.layers.Normalization()
+normalize_layer.adapt(np.vstack((X_train, X_val, X_test)))
+
+# Build model
+
+def build_model(input_shape, output_size):
+    input_layer = tf.keras.Input(shape=input_shape, name='input_layer')
+
+    x = normalize_layer(input_layer)
+
+    for n_unit in [128, 64]:
+        rnn_x = tf.keras.layers.SimpleRNN(n_unit,
+                                    return_sequences=True,
+                                    kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED)
+                                    )(x)
+
+        lstm_x = tf.keras.layers.LSTM(n_unit,
+                                    return_sequences=True,
+                                    kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED)
+                                    )(x)
+
+        x = tf.concat([rnn_x, lstm_x], axis=-1)
+
+    rnn_x = tf.keras.layers.SimpleRNN(n_unit,
+                                return_sequences=False,
+                                kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED)
+                                )(x)
+
+    lstm_x = tf.keras.layers.LSTM(n_unit,
+                                return_sequences=False,
+                                kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED)
+                                )(x)
+
+    x = tf.concat([rnn_x, lstm_x], axis=-1)
+
+    x = tf.keras.layers.Dense(32,
+                            activation='relu',
+                            kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED),
+                            name='fc_layer_1'
+                            )(x)
+
+    output_layer = tf.keras.layers.Dense(output_size,
+                            kernel_initializer=tf.initializers.GlorotUniform(seed=RANDOM_SEED),
+                            name='output_layer')(x)
+
+    model = tf.keras.Model(input_layer, output_layer, name='combined_model')
+
+    return model
+
+# Summary of model
+
+INPUT_SHAPE = X_train.shape[-2:]
+model = build_model(INPUT_SHAPE,
+                    LABEL_SIZE)
+model.summary()
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/TeslaStock/summary.PNG" alt="dash1">
+  <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Setting other parameters for the model</h2>
+  <div id="editor-pythonsilhoutte" style="height: 200px;;font-size:15px">
+  <div contenteditable="false">
+# hyperparameter values
+EPOCHS = 500
+LR = 1e-3
+
+# Some optimization for model
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(learning_rate=LR), # Use optimizer Adam
+    loss=tf.keras.losses.MeanSquaredError(), # Use loss Mean Squared Error Function
+)
+  </div></div>
+  <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Training Model</h2>
+  <div id="editor-pythonviz" style="height: 150px;;font-size:15px">
+  <div contenteditable="false">
+history = model.fit(train_ds,
+                    validation_data=val_ds,
+                    epochs=EPOCHS)
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/TeslaStock/trainingmodel.PNG" alt="dash1">
+
+  <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Model Evalutation</h2>
+  <div id="editor-pythoncluster" style="height: 600px;;font-size:15px">
+  <div contenteditable="false">
+# Define MAE
+def mae(y_true, y_pred):
+    mae = np.mean(np.abs((y_true - y_pred)))
+
+    return mae
+
+# Define MSE
+def mse(y_true, y_pred):
+    mse = np.mean((y_true - y_pred) ** 2)
+
+    return mse
+
+# Define RMSE
+def rmse(y_true, y_pred):
+    rmse = np.sqrt(np.mean((y_true-y_pred)**2))
+
+    return rmse
+
+# Define MAPE
+def mape(y_true, y_pred):
+    mape = np.mean(np.abs((y_true-y_pred) / y_true)) * 100
+
+    return mape
+
+# Print result 
+y_test_pred = model.predict(X_test, verbose=0)
+print(f'RMSE: {rmse(y_test, y_test_pred)}')
+print(f'MAPE: {mape(y_test, y_test_pred)}')
+print(f'MSE: {mse(y_test, y_test_pred)}')
+print(f'MAE: {mae(y_test, y_test_pred)}')
+  </div></div>
+  <blockquote style="font-size: 18px; line-height:2em;">
+    <p>The result is:</p>
+    <ul style="color: #fec544;">
+      <li><span style="color: aqua;">RMSE:</span> 7.08275569019287</li>
+      <li><span style="color: aqua;">MAPE</span>: 2.698402709155248</li>
+      <li><span style="color: aqua;">MSE</span>: 50.16542816695947</li>
+      <li><span style="color: aqua;">MAE</span>: 5.680429943373632</li>
+    </ul> 
+   
+    
+    </blockquote>
+    <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Visualization Result</h2>
+    <p style="text-align:center; color:#fec544; font-weight:bold">Visualize loss / accuracy results during training</p>
+
+    <div id="editor-pythongroupby" style="height: 420px;;font-size:15px">
+    <div contenteditable="false">
+train_loss = history.history['loss'] # Read training loss information
+val_loss = history.history['val_loss'] # Read validation loss information
+
+plt.figure(figsize=(10, 5)) # Set the figure size
+
+plt.subplot(1, 2, 1) # Initialize the plot for training loss
+plt.xlabel('Epochs') # Display the x-axis label as 'Epochs'
+plt.ylabel('Loss') # Display the y-axis label as 'Loss'
+plt.title('Training loss') # Display the title of the current plot as 'Training Loss'
+plt.plot(train_loss, color='green') # Plot the training loss values over epochs (plotting in green)
+
+plt.subplot(1, 2, 2) # Initialize the plot for validation loss
+plt.xlabel('Epochs') # Display the x-axis label as 'Epochs'
+plt.ylabel('Loss') # Display the y-axis label as 'Loss'
+plt.title('Validation loss') # Display the title of the current plot as 'Validation loss'
+plt.plot(val_loss, color='orange') # Plot the validation loss values over epochs (plotting in orange)
+
+plt.show() # Display both small plots
+    </div></div>
+    <img class="st-zoom-in" src="assets/img/blog/TeslaStock/trainlossviz.png" alt="dash1">
+
+    <p style="text-align:center; color:#fec544; font-weight:bold">Visualize the predicted value compared to the actual value on the test set</p>
+
+    <div id="editor-pythontrain" style="height: 420px;;font-size:15px">
+    <div contenteditable="false">
+def plot_difference(y, pred):
+    plt.figure(figsize=(20, 6))
+    times = range(len(y))
+    y_to_plot = y.flatten()
+    pred_to_plot = pred.flatten()
+
+    plt.plot(times, y_to_plot, color='steelblue', marker='o', label='True value')
+    plt.plot(times, pred_to_plot, color='orangered', marker='X', label='Prediction')
+
+    plt.title('Adj Closing Price per day')
+    plt.xlabel('Date')
+    plt.ylabel('Adj Close Price')
+    plt.legend()
+    plt.show()
+
+plot_difference(y_test[:300], model.predict(X_test[:300], verbose=0))
+    </div></div>
+    <img class="st-zoom-in" src="assets/img/blog/TeslaStock/final.png" alt="dash1">
+
+    <blockquote style="font-size: 18px; line-height:2em;">
+      <p> Based on <span>low-value MAE, MSE, RMSE and MAPE</span> metrics, as well as <span>training loss visualization</span>, <span>validation loss</span>, and predicted versus true value visualization on the test set, it is possible concluded that the <span>model performed well</span> in predicting <span>Tesla's stock price</span>!
+      </p>  
+     
+      
+      </blockquote>
+
+<blockquote>View my full project: <a href="https://github.com/phamvanhoangphi13112002/TeslaStockPrediction" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote>
+
+
+<!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use passage of Lorem Ipsum.</p>
+<h2>Phosfluorescently engage worldwide?</h2>
+<p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+
+<div class="st-height-b20 st-height-lg-b20"></div>
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+</div> -->
+<div class="st-height-b35 st-height-lg-b35"></div>
+<div class="st-post-meta">
+<div class="st-post-tages">
+  <h4 class="st-post-tage-title">Skill:</h4>
+  <ul class="st-post-tage-list st-mp0">
+    <li><a href="#">Python</a></li>
+    <li><a href="#">Machine Learning</a></li>
+
+    <li><a href="#">LSTM</a></li>
+
+
+
+    <!-- <li><a href="#">web</a></li>
+    <li><a href="#">business</a></li>
+    <li><a href="#">agency</a></li>
+    <li><a href="#">development</a></li> -->
+  </ul>
+</div>
+<!-- <div class="st-post-share">
+  <h4 class="st-post-share-title">Share:</h4>
+  <div class="st-post-share-btn-list">
+     <a href="#"><i class="fab fa-facebook-f"></i></a> 
+     <a href="#"><i class="fab fa-twitter"></i></a> 
+     <a href="#"><i class="fab fa-behance"></i></a> 
+     <a href="#"><i class="fab fa-instagram"></i></a> 
+     <a href="#"><i class="fab fa-pinterest-p"></i></a>
+  </div>
+</div> -->
+</div>
+
+<div class="st-height-b60 st-height-lg-b60"></div>
+</div>
+<div class="st-post-btn-gropu">
+<a href="./project4.html" class="st-btn st-style2 st-color1 st-size-medium">Previous Post</a>
+<a href="./index.html" class="st-btn st-style2 st-color1 st-size-medium">Next Post</a>
+</div>
+</div>
+<div class="st-height-b60 st-height-lg-b60"></div>
+
+<div class="container" style="margin-top: 3em;">
+  <div class="row">
+    <div class="col-lg-10 offset-md-1">
+      <div class="st-post-details st-style1">
+        <div class="st-social-info" >
+          <div class="st-social-text">Visits my social profile and get connected:</div>
+          <div class="st-social-link">
+            <a href="https://github.com/phamvanhoangphi13112002" class="st-social-btn active" target = '_blank'>
+          <span class="st-social-icon"><i class="fab fab fa-github"></i></span>
+          <span class="st-icon-name">Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/pham-van-hoang-phi-8a439226a/" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
+          <span class="st-icon-name">LinkedIn</span>
+        </a>
+        <a href="https://www.facebook.com/hoangphi1311" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="st-icon-name">Facebook</span>
+        </a>
+        <a href="mailto:hoangphi1311.gpa@gmail.com" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fa fa-envelope"></i></span>
+          <span class="st-icon-name">Gmail</span>
+        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 3em;">
+  <div class="row">
+    <div class="col-lg-10 offset-md-1">
+      <div class="st-post-details st-style1" style="font-weight: 400; font-size:16px">
+        <footer>
+          <div class="container" style="text-align:center; justify-content:center;   align-items: center;">
+          <div class="st-copyright-wrap text-center" >
+          <div class="st-copyright-text" >© 2023. Designed by HoangPhi. All right reserved.</div>
+          </div>
+          </div>
+          </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Footer Seciton -->
+<a id="back-to-top" href="#home">
+  <i class="fa fa-arrow-up"></i>
+</a>
+<!-- End Footer Seciton -->
+
+<!-- Scripts -->
+
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/jquery.slick.min.js"></script>
+<script src="assets/js/lightgallery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+<script src="assets/js/ripples.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>

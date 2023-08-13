@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Laralink">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Page Title -->
+  <title>Hoàng Phi's Portfolio</title>
+  <!-- Favicon Icon -->
+  <link rel="icon" href="assets/img/Logo_phi.png" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body id="home">
+  <a id="back-to-top" href="#home">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+  <!-- Start Header Section -->
+  <header id="top" class="st-site-header st-style1 st-sticky-header">
+    <div class="st-main-header">
+      <div class="container">
+        <div class="st-main-header-in">
+          <div class="st-main-header-left">
+            <a class="st-site-branding" href="index.html"><img src="assets/img/logo.png" alt="Hoàng Phi"></a>
+          </div>
+          <div class="st-main-header-right">
+            <div class="st-nav">
+              <ul class="st-nav-list st-onepage-nav">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#portfolio">Achievements</a></li>
+                <li><a href="index.html#blog">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+              <div class="sp-phone">
+                <svg viewBox="0 0 513.64 513.64">
+                  <g>
+                    <g>
+                      <path d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z" />
+                    </g>
+                  </g>
+                </svg>
+                <div class="sp-phone-no">+84 905 683 764</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Section -->
+
+
+    <div class="st-page-heading st-dynamic-bg" data-src="assets/img/blog/Superstore/header.png">
+      <div class="container">
+        <div class="st-page-heading-in text-center">
+          <h1 class="st-page-heading-title" >SALE ANALYSIS FOR SUPERSTORE</h1>
+          <h2>Using SSIS (ETL), SQL (Analysis), Power BI (Visualization), Tableau (Forecasting) & Python (Cleaning and Build Predictive Model) </h2>
+          <div class="st-post-label">
+            <span>By <a href="#">Hoang Phi</a></span>
+            <span>2023</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- .st-page-heading -->
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-md-1">
+          <div class="st-post-details st-style1">
+            <blockquote style="font-size: 18px;   border-left: 5px solid aqua;border-right: 5px solid aqua">
+              <p style="text-align:justify; text-align:center; font-weight:bold; color:#fec544; font-size:24px ">CONTENTS</p>
+              <ol style="font-size: 20px; line-height:1.5em">
+                <li><a href="#section1">The Data Source</a></li>
+                <li><a href="#section2">Business Requirements</a></li>
+                <li><a href="#section3">Data Cleaning with Python in Google Colab</a></li>
+                <li><a href="#section4">Design Data Warehouse and ETL Process</a></li>
+                <li><a href="#section5">Fact 1: Analysis of the store's overall YTD business situation and sale metrics ( Using Power BI )  </a></li>
+                <li><a href="#section6">Fact 2: RFM Customer Segmentation Analysis ( Using Power BI )</a></li>
+                <li><a href="#section7">Fact 3: Customer Cohort Analysis( Using SQL & Tableau )</a></li>
+                <li><a href="#section8">Fact 4: Forecasting and Predictive Returned Goods ( Using Tableau & Python )</a></li>
+
+            </ol>
+            </blockquote>
+            <h2 id="section1" style="justify-content: center; text-align:center; margin-bottom:1em; margin-top:2em" >The Data Source</h2>
+            <blockquote style="font-size: 18px;">
+              <p style="text-align:justify;">This is a data set about <span>a global store</span>, recording customer transactions from <span>2014 to 2017</span> . This is an extremely complete sample data set for learning and practicing Business Intelligence and Analysis processes. This data set is in .xlsx file format and has 3 sheets: <span style="font-weight: bold; color:white">"Orders", "Returns" and "People"</span>, but in this project, I will only use 2 sheets, <span style="color: #fec544; font-weight:bold">"Orders", "Returns"</span>.</p>
+            </blockquote>
+            <div class="grid-container22">
+              <div class="column3">
+                
+                <img src="assets/img/blog/Superstore/data_sheet1.png" alt="Ảnh 1">
+              </div>
+              <div class="column3">
+                <img src="assets/img/blog/Superstore/data_sheet2.png" alt="Ảnh 1">
+              </div>
+            </div>
+            <div class="grid-container22" style="margin-top:20px">
+              <div class="column3">
+                <p style="text-align:center; color:#fec544; font-weight:bold"> Sheet: Orders </p>
+              </div>
+              <div class="column3">
+                <p style="text-align:center; color:#fec544; font-weight:bold"> Sheet: Returns </p>
+
+              </div>
+              </div>
+              <div class="grid-container22" >
+                <div class="column3">
+                  <p style="text-align:center;"> The Orders sheet has: 51290  rows and  24  columns <br> With columns: <span style="color: #fec544;">CustomerID, OrderDate, Market, Region, ProductID</span>... </p>
+                </div>
+                <div class="column3">
+                  <p style="text-align:center;"> The Returned sheet has: 2034 rows and 3 columns <br><span style="color: #fec544;">Returned, OrderID, Region</span>... </p>
+  
+                </div>
+                </div>
+<blockquote>Download dataset in my repository: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/0%20-%20Datasource" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote>
+            
+<h2 id="section2" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em,">Business Requirements</h2>
+
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> Analysis of the store's overall YTD business situation and sale metrics </p>
+
+
+  <div class="grid-container21">
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/salesbr.avif" alt="Ảnh 1">
+    </div>
+    <div class="column3">
+      <p > 
+        <ul style="color:white; text-align:justify">
+          <li>Analysis of the general business situation of the store with some sale metrics such as <span style="color: #fec544;">YTD Total Sales, YTD Total Profit, YTD Quantity Sold, Best Seller, ...</span>.</li>
+          <li>When a business conducts YTD analysis, they are <span style="color: #fec544;">reviewing and evaluating</span> their <span style="color: #fec544;">performance, financial status</span>, or other data from the beginning of the year up to the current point <span style="color:#fec544">in the same fiscal year or statistical period</span>.</li>
+        </ul> </p>
+    </div>
+  </div>  
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> RFM Customer Segmentation Analysis </p>
+  <div class="grid-container21">
+    
+    <div class="column3">
+      <p > 
+        <ul style="color:white; text-align:justify">
+          <li><span style="color: #fec544;">Recency (R)</span>: How recently did the customer make a purchase?
+          </li>
+          <li><span style="color: #fec544;">Frequency (F)</span>: How often does the customer make purchases within a specific timeframe?</li>
+          <li><span style="color: #fec544;">Monetary (M)</span>: How much money has the customer spent within a specific timeframe?</li>
+          <li>RFM analysis aims to <span style="color: #fec544;">identify</span> the most valuable customer segments from which to <span style="color: #fec544;">have effective marketing campaigns for each segment</span>.</li>        </ul> </p>
+    </div>
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/rfmbr.png" alt="Ảnh 1">
+    </div>
+  </div>    
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> Customer Cohort Analysis </p>
+  <div class="grid-container21">
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/cohortbr.jpg" alt="Ảnh 1">
+    </div>   
+    <div class="column3">
+      <p > 
+        <ul style="color:white; text-align:justify">
+         
+          <li>
+            Cohort analysis is a method that <span style="color: #fec544;">categorizes users</span> based on common attributes and studies <span style="color: #fec544;">their behavior trends</span> over time, revealing insights into <span style="color: #fec544;">group-specific patterns and performance</span>.</li>
+          <li>Cohort analysis is used to study how distinct user groups behave over time, providing insights into their behavior and performance to <span style="color: #fec544;">inform strategy optimization and data-driven decisions</span>.</li>        </ul> </p>
+    </div>
+
+  </div>
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> Forecasting and Predictive model </p>
+  <div class="grid-container21">
+    
+    <div class="column3">
+      <p > 
+        <ul style="color:white; text-align:justify">
+          
+          <li>Forecasting in businesses <span style="color: #fec544;">involves predicting and estimating</span> the future using <span style="color: #fec544;">historical and current data</span> to support strategic decision-making, financial planning, and resource management.</li>
+          <li>By examining past sales data, the company can <span style="color:#fec544">identify patterns and trends</span> that provide insights into future sales performance. </li>
+        </div>
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/Forecasting.jpg" alt="Ảnh 1">
+    </div>
+  </div> 
+            <!-- <blockquote>View my full project: <a href="https://github.com/phamvanhoangphi13112002/CustomerSegmentation-RFMAnalysis" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote> -->
+<h2 id="section3" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom:1em">Data Cleaning with Python in Google Colab</h2>
+<p style="text-align:center; color:#fec544; font-weight:bold"> Import neccessary libraries and read file: </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/libraries.png" alt="dash1">
+<p style="text-align:center; color:#fec544; font-weight:bold"> Data overview: </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/overview.PNG" alt="dash1">
+<div class="grid-container21">
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> df1.info() </p>
+  </div>
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> df2.isnull().sum() </p>
+
+  </div>
+  </div>
+
+  <div class="grid-container21">
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/datainfo.PNG" alt="Ảnh 1">
+    </div>
+    <div class="column3">
+      <img src="assets/img/blog/Superstore/datanull.PNG" alt="Ảnh 1">
+    </div>
+  </div>
+  <div class="grid-container21" style="margin-top: 1em;">
+    <div class="column3">
+      <p style="text-align:center; color:#fec544; font-weight:bold"> df1.duplicated().sum() </p>
+    </div>
+    <div class="column3">
+      <p style="text-align:center; color:#fec544; font-weight:bold"> Unique Value </p>
+  
+    </div>
+    </div>
+  
+    <div class="grid-container21">
+      <div class="column3">
+        
+        <img src="assets/img/blog/Superstore/duplicated.PNG" style="height: 150px;" alt="Ảnh 1">
+      </div>
+      <div class="column3">
+        <img src="assets/img/blog/Superstore/unique.PNG" alt="Ảnh 1">
+      </div>
+    </div>
+    <blockquote style="font-size: 18px; line-height:2em;">
+      <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">My Exploration</span>
+      </p>
+      <ul>
+      <li>Total Records: <span>51290 records</span>.</li>
+      <li>Total Columns: <span>24 columns</span>.</li>
+      <li>All columns with  <span>correct data type</span>.</li>
+      <li>There are 1 columns with null values: <span>Postal Code with 41296 null values</span>, so I will <span>delete this field</span>.</li>
+      <li>All columns with <span>correct data type</span>.</li>
+      <li>Some field like: Sales, Discounts,... need to be <span>round</span></li>
+    </ul></blockquote>
+    <blockquote style="font-size: 18px; line-height:2em;">
+      <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">The Scripts of Cleaning</span>
+      </p>
+      <ul>
+        <li>Delete the <span>Postal Code</span> columns</li>
+        <li>Rename all columns to <span>lowercase and replace the space</span> by underscore if exist</li>
+        <li><span>Round number</span> into <span>2</span> decimal</li>  
+        <li><span>Join</span> sheet 2 <span>"Return"</span> to get the data about <span>return goods</span>
+        </li>    
+        <li><span>Label</span> for each Order ID: <span>Yes by 1</span> and fill <span>No by 0</span></li>
+        <li><span>Sort</span> the data by <span>"Row_ID"</span></li>
+        <li><span>Drop duplicated</span> values if exist</li>
+      </ul>
+    </blockquote>
+    <blockquote style="font-size: 18px; line-height:2em;"><p>Here is <span>my code for cleaning</span> in Python:</p></blockquote>
+
+    <div id="editor-python" style="height:520px;font-size:15px">
+<div contenteditable="false">
+# Join sheet 2 to get the data about return goods (left-join)
+df = pd.merge(df1,df2, on='Order ID', how='left')
+# Fill the Nan in Returned by No
+df['Returned'] = df['Returned'].fillna('No')
+# Delete PostalCode columns
+df =df.drop('Postal Code', axis =1)
+df = df.drop('Region_y', axis =1)
+# Rename all columns to lowercase
+df.rename(columns=lambda x: x.lower().replace(" ", "_"), inplace=True)
+# Change the datatype of (OrderDate and ShipDate) to datetime
+df['order_date'] = pd.to_datetime(df['order_date'])
+df['ship_date'] = pd.to_datetime(df['ship_date'])
+# Round number into 2 decimal
+df['profit'] = df['profit'].round(2)
+df['shipping_cost'] = df['shipping_cost'].round(2)
+# Sort the data by "Row_ID
+df = df.sort_values(by='row_id')
+# Drop duplicated value
+df = df.drop_duplicates(keep='first')
+# reset row_id
+df['row_id'] = range(1, len(df) + 1)
+</div></div>
+<p style="text-align:center; color:#fec544; font-weight:bold; font-size:18px; margin-top:1em"> <br>Data After Clean (with 51290 Records)<br><span style="font-weight: lighter; color:azure">(Save it to new files)</span></p>
+<img src="assets/img/blog/Superstore/dataafterclean.PNG" alt="Ảnh 1">
+<blockquote style="font-size: 18px; line-height:2em;"><p>Download the Data After Cleaning: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/1%20-%20Data%20Cleaning" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
+            <h2 style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Design Data Warehouse</h2>
+ 
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em"> Bus Matrix of Sales </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/bus_matrixrs.png" alt="dash1">
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em">Data Warehouse </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/data_warehouse.png" alt="dash1">
+<h2 id="section4" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">ETL Process</h2>
+<div class="grid-container21">
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold; "> Dim Customer </p>
+  </div>
+  <div class="column3">
+    <p style="text-align:center; color:#fec544; font-weight:bold"> Dim Product </p>
+
+  </div>
+  </div>
+
+  <div class="grid-container21">
+    <div class="column3">
+      
+      <img src="assets/img/blog/Superstore/etl_dim_customer.png" alt="Ảnh 1">
+    </div>
+    <div class="column3">
+      <img src="assets/img/blog/Superstore/etl_dim_product.png" alt="Ảnh 1">
+    </div>
+  </div>
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em">Dim Time </p>
+  <div class="grid-container20"><div class="column3">  <img class=" center" src="assets/img/blog/Superstore/etl_dim_time.png" alt="dash1">
+  </div></div>
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em">Dim Location </p>
+  <div class="grid-container20"><div class="column3">    <img class=" center" src="assets/img/blog/Superstore/etl_dim_location.PNG" alt="dash1">
+
+  </div></div>
+  <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em">Fact Sales </p>
+  <div class="grid-container20"><div class="column1"> <img class=" center" src="assets/img/blog/Superstore/etl_fact_sales.png" alt="dash1"></div></div>
+    <blockquote style="font-size: 18px; line-height:2em;"><p>Download my ETL project in SSIS: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/2%20-%20ETL%20by%20SSIS" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
+    
+    <h2 id="section5" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Fact 1: Analysis of the store's overall YTD business situation and sale metrics <br> <span style="color: #fec544;">( Using Power BI )</span></h2>
+    <div class="st-slider st-style1">
+      <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1">
+        <div class="slick-wrapper">
+          <div class="slick-slide-in">
+            <img class="st-zoom-in" src="assets/img/blog/Superstore/YTD Sales Dashboard.PNG" alt="dash1">
+            <blockquote class="dashboard-quote">
+              <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">All Segment Overall YTD Business Situation </span>
+      </p>
+      <ul style="margin:10px">
+        <li>Total YTD Sales: <span>$4.30M</span> and <span style="color: greenyellow;">26.25% increase</span> over the previous year</li>
+        <li>Total YTD Profits: <span>$504.17K</span> and <span style="color: greenyellow;">23.89% increase</span> over the previous year</li>
+        <li>Total YTD Quantity: <span>60.62K</span> and <span style="color: greenyellow;">25.94% increase</span> over the previous year</li>
+        <li>Total YTD Profit Margin: <span>11.73%</span> and <span style="color: red;">1.87% decrease</span> over the previous year</li>
+        <li><span>Technology</span> products brought in the <span>highest revenue</span> last year (2017), followed by Furniture and finally Office Supplies</li>
+        <li>Top 5 and Bottom 5 Product in the Dashboard</li>
+        <li><span>Asia Pacific market</span> brings the <span>most revenue</span> to the company and <span>Africa market</span> brings the <span>least revenue</span> for the company.  </li>
+      </ul>
+            </blockquote>
+          </div>
+          <div class="slick-slide-in">
+            <img class="st-zoom-in" src="assets/img/blog/Superstore/YTD Sales Dashboard_consumer.PNG" alt="dash1">
+            <blockquote class="dashboard-quote">
+              <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Segment: Consumer </span>
+      </p>
+      <ul style="margin:10px">
+        <li>Total YTD Sales: <span>$2.14M</span> and <span style="color: greenyellow;">23.83% increase</span> over the previous year</li>
+        <li>Total YTD Profits: <span>$257.68K</span> and <span style="color: greenyellow;">23.63% increase</span> over the previous year</li>
+        <li>Total YTD Quantity: <span>30.84K</span> and <span style="color: greenyellow;">25.37% increase</span> over the previous year</li>
+        <li>Total YTD Profit Margin: <span>12.03%</span> and <span style="color: red;">-0.16% decrease</span> over the previous year</li>
+        <li><span>Technology</span> products brought in the <span>highest revenue</span> last year (2017), followed by Furniture and finally Office Supplies (Consumer)</li>
+        <li>Top 5 and Bottom 5 Product in the Dashboard</li>
+        <li><span>Asia Pacific market</span> brings the <span>most revenue</span> to the company and <span>Africa market</span> brings the <span>least revenue</span> for the company. (Consumer) </li>
+      </ul>
+            </blockquote>
+          </div>
+          <div class="slick-slide-in">
+            <img class="st-zoom-in" src="assets/img/blog/Superstore//YTD Sales Dashboard_corporate.PNG" alt="dash1">
+            <blockquote class="dashboard-quote">
+              <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Segment: Corperate </span>
+      </p>
+      <ul style="margin:10px">
+        <li>Total YTD Sales: <span>$1.29M</span> and <span style="color: greenyellow;">21.47% increase</span> over the previous year</li>
+        <li>Total YTD Profits: <span>$140.20K</span> and <span style="color: greenyellow;">11.53% increase</span> over the previous year</li>
+        <li>Total YTD Quantity: <span>17.92K</span> and <span style="color: greenyellow;">22.04% increase</span> over the previous year</li>
+        <li>Total YTD Profit Margin: <span>10.84%</span> and <span style="color: red;">-8.18% decrease</span> over the previous year</li>
+        <li><span>Technology</span> products brought in the <span>highest revenue</span> last year (2017), followed by Furniture and  Office Supplies (Corperate)</li>
+        <li>Top 5 and Bottom 5 Product in the Dashboard</li>
+        <li><span>Asia Pacific market</span> brings the <span>most revenue</span> to the company and <span>Africa market</span> brings the <span>least revenue</span> for the company. (Corperate) </li>
+      </ul>
+            </blockquote>
+          </div>
+          <div class="slick-slide-in">
+            <img class="st-zoom-in" src="assets/img/blog/Superstore/YTD Sales Dashboard_homeoffice.PNG" alt="dash1">
+            <blockquote class="dashboard-quote">
+              <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Segment: Home Office </span>
+      </p>
+      <ul style="margin:10px">
+        <li>Total YTD Sales: <span>$865.00K</span> and <span style="color: greenyellow;">41.45% increase</span> over the previous year</li>
+        <li>Total YTD Profits: <span>$106.29K</span> and <span style="color: greenyellow;">46.01% increase</span> over the previous year</li>
+        <li>Total YTD Quantity: <span>11.86K</span> and <span style="color: greenyellow;">34.00% increase</span> over the previous year</li>
+        <li>Total YTD Profit Margin: <span>12.29%</span> and <span style="color:greenyellow;">3.22% decrease</span> over the previous year</li>
+        <li><span>Technology</span> products brought in the <span>highest revenue</span> last year (2017), followed by Furniture and finally Office Supplies (Home Office)</li>
+        <li>Top 5 and Bottom 5 Product in the Dashboard</li>
+        <li><span>Asia Pacific market</span> brings the <span>most revenue</span> to the company and <span>Africa market</span> brings the <span>least revenue</span> for the company. (Home Office) </li>
+      </ul>
+            </blockquote>
+          </div>
+          
+        </div>
+      </div><!-- .slick-container -->
+      <div class="pagination st-style2 "></div> <!-- If dont need Pagination then add class .st-hidden -->
+      <div class="swipe-arrow st-style1 "> <!-- If dont need navigation then add class .st-hidden -->
+        <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+        <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+      </div>
+    </div>
+    <blockquote style="font-size: 18px; line-height:2em;">
+      <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Conclusion and Recommend Strategies:</span></p>
+        <p><span style="font-size: 20px; font-weight:bold; ">1. Profit Optimization Strategy</span></p>
+
+      <ul>
+        <li><span style="color: aqua; font-weight:bold">Assessment:</span> The <span>profit performance</span> of all segments <span>has increased</span> this year compared to the previous year, 
+          except for a <span>slight decrease</span> in the overall <span>profit margin</span>. This might result from increased sales volume, but attention is needed to control pricing and costs to ensure sustainable profitability.</li>
+        <li><span style="color: aqua; font-weight:bold">Strategy: </span> <span>Optimize profit margins</span>  by <span>adjusting pricing and controlling production costs</span>. Ensure that the profit growth is not solely reliant on increased sales but also on improving price and cost management.</li>
+  
+        </ul>
+        <p><span style="font-size: 20px; font-weight:bold; ">2. Focus on High-Growth Segments:</span></p>
+
+          <ul>
+            <li><span style="color: aqua; font-weight:bold">Assessment:</span> <span>Both the "Consumer", "Corporate" and "Home Office"</span> segments have shown significant <span>growth</span> in key metrics such as sales, profit, and quantity.</li>
+            <li><span style="color: aqua; font-weight:bold">Strategy: </span> Concentrate on <span>developing and providing</span> products and services that cater to the needs of these segments. <span>Build targeted marketing campaigns</span> aimed at customers within these segments to increase market share and sales.</li>
+      
+            </ul>
+            <p><span style="font-size: 20px; font-weight:bold; ">3. Product Portfolio Optimization:</span></p>
+
+              <ul>
+                <li><span style="color: aqua; font-weight:bold">Assessment:</span> Products categorized under <span>"Technology" </span> generated the <span>highest revenue</span> in the previous year, followed by "Furniture" and "Office Supplies" in 2017.</li>
+                <li><span style="color: aqua; font-weight:bold">Strategy: </span> Adjust the product portfolio to optimize revenue. Consider <span>investing</span> in the development and <span>promotion</span> <span>of high-profit-margin products</span>, as well as assessing the <span>optimization of underperforming products</span></li>
+          
+                </ul>
+                <p><span style="font-size: 20px; font-weight:bold; ">4. Market Expansion and Risk Management:</span></p>
+
+                  <ul>
+                    <li><span style="color: aqua; font-weight:bold">Assessment:</span> <span>"Asia Pacific"</span> brought in the <span>highest revenue</span>, while <span>"Africa"</span> contributed the <span>least</span>.
+                     <br> Besides, the <span>density of customers</span> buying goods in <span>Africa is high</span>, but the revenue is small, this may come from the fact that in the African market, only <span>low-value products can be sold</span>.
+                      <br> <span>The USCA market</span> has a <span>low density of buyers</span> but contributes a <span>large amount of revenue</span>, proving that it can be sold here.</li>
+                    <li><span style="color: aqua; font-weight:bold">Strategy: </span> <span>Seize</span> market expansion opportunities in regions like <span>"Asia Pacific"</span> to continue capitalizing on growth potential. 
+                     <br> Simultaneously, consider ways to <span>optimize business operations</span> in markets contributing <span>lower revenue to minimize risks</span>.</span>
+                    <br>                       Besides, The company should <span>have marketing strategies in the USCA</span> market to promote sales from this potential market
+                  </li>
+                    </ul>
+    </blockquote>
+
+    <h2 id="section6" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Fact 2: RFM Customer Segmentation Analysis
+
+      <br> <span style="color: #fec544;">( Using Power BI )</span></h2>
+
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/rfmcs.PNG" alt="dash1">
+      <blockquote style="font-size: 18px; line-height:2em;">
+        <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Conclusion and Recommend Strategies:</span></p>
+          <p><span style="font-size: 20px; font-weight:bold; ">1. Promising (16.77%):</span></p>
+  
+        <ul>
+          <li><span style="color: aqua; font-weight:bold">Evaluation:</span> Customers in this group show positive signs with relatively high potential.</li>
+          <li><span style="color: aqua; font-weight:bold">Strategy: </span> Create special promotions or offers to encourage them to continue shopping and increase engagement with your brand.</li>
+    
+          </ul>
+          <p><span style="font-size: 20px; font-weight:bold; ">2. New Customers (14.92%):</span></p>
+  
+            <ul>
+              <li><span style="color: aqua; font-weight:bold">Evaluation:</span> This group consists of new customers, so it's important to retain them.</li>
+              <li><span style="color: aqua; font-weight:bold">Strategy: </span> Send welcome promotions or special deals for their next purchase. Create a positive experience to encourage them to come back.</li>
+        
+              </ul>
+              <p><span style="font-size: 20px; font-weight:bold; ">3. Cannot Lose Them (13.71%):</span></p>
+  
+                <ul>
+                  <li><span style="color: aqua; font-weight:bold">Evaluation:</span> This group has potential brand loyalty, but maintaining positive interaction is key.</li>
+                  <li><span style="color: aqua; font-weight:bold">Strategy: </span> Provide added value through new product information and loyalty programs. Ensure they always feel interested in your brand.</li>
+            
+                  </ul>
+                  <p><span style="font-size: 20px; font-weight:bold; ">4. Champions (11.27%):
+                  </span></p>
+  
+                    <ul>
+                      <li><span style="color: aqua; font-weight:bold">Evaluation:</span> These are exceptional customers who generate high profits.</li>
+                      <li><span style="color: aqua; font-weight:bold">Strategy: </span> Maintain a strong relationship by offering excellent customer service and exclusive benefits. Encourage them to refer others.
+                    </li>
+                      </ul>
+                      <p><span style="font-size: 20px; font-weight:bold; ">5. Loyal (7.21%):
+
+                      </span> </p>
+  
+                        <ul>
+                          <li><span style="color: aqua; font-weight:bold">Evaluation:</span> This group shows loyalty, but may need additional motivation to sustain it.</li>
+                          <li><span style="color: aqua; font-weight:bold">Strategy: </span> Offer special benefits and rewards to show appreciation for their loyalty.</li>
+                    
+                          </ul>
+                          <p><span style="font-size: 20px; font-weight:bold; ">6. About to Sleep (6.55%), Hibernating (7.96%), At Risk (5.24%)</span></p>
+                  
+                            <ul>
+                              <li><span style="color: aqua; font-weight:bold">Evaluation:</span> These groups are related to loss or potential loss.</li>
+                              <li><span style="color: aqua; font-weight:bold">Strategy: </span> Send promotional messages, update products, and services to rekindle their interest. Actively monitor and engage to retain them.</li>
+                        
+                              </ul>
+                              <p><span style="font-size: 20px; font-weight:bold; ">7. Lost Customers (9.73%):
+
+                              </span></p>
+                  
+                                <ul>
+                                  <li><span style="color: aqua; font-weight:bold">Evaluation:</span> This group has the potential to develop into more positive customer segments.</li>
+                                  <li><span style="color: aqua; font-weight:bold">Strategy: </span> Understand their needs and desires better to offer appropriate products and services.</li>
+                            
+                                  </ul>
+                                  <p><span style="font-size: 20px; font-weight:bold; ">8. Need Attention (2.07%): 
+
+
+                                  </span></p>
+                  
+                                    <ul>
+                                      <li><span style="color: aqua; font-weight:bold">Evaluation:</span> This group needs attention to prevent further loss.</li>
+                                      <li><span style="color: aqua; font-weight:bold">Strategy: </span> Contact them directly to understand their issues and concerns, then provide suitable solutions.
+                                    </li>
+                                      </ul>
+      </blockquote>
+      <blockquote style="font-size: 18px; line-height:2em;">
+        <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Conclusion:</span> </p>
+
+        <ul>
+<li><span style="color: #fec544;">Promising, New Customers, Cannot Lose Them:</span> The total percentage of these groups is <span>nearly 45%</span>, indicating a potential and important customer set. The key strategy is to <span>create and maintain positive relationships, create value</span>, and make sure they don't lose points.</li>
+<li><span style="color: #fec544;">Champions, Loyal:</span> At about <span>18%</span>, these are the groups that bring in <span>stable profits</span>. Strategy should <span>focus on maintaining and driving positive</span> interactions to maintain loyalty and increase revenue.</li>
+ <li><span style="color: #fec544;">About to Sleep, Hibernating, At Risk:</span> These groups together make up about <span>20%</span>, <span>indicating a risk of losing points</span> or stopping interaction. Strategy needs to <span>focus on re-igniting interest and engagement</span> so as not to lose customer points.</li>      
+<li><span style="color: #fec544;">Lost Customers:</span> With more than <span>9%</span>, this is a <span>lost group</span>, but there is still a chance to recover. Strategy should <span>focus on restoring the relationship and motivating</span> them to return.</li>
+<li><span style="color:#fec544;">Potential, Need Attention:</span> This group together makes up about <span>6%</span>, representing growth potential and issues that need attention. Custom strategy is to <span>dig deeper and provide solutions to exploit potential</span> or solve problems.
+</li></ul>
+        <p>In conclusion, based on the RFM analysis, the business should concentrate on customer retention, reactivating potential customers, strengthening interactions with valuable and potential segments, and developing engagement strategies to optimize business effectiveness and increase profitability.</p>
+      </blockquote>
+      <blockquote style="font-size: 18px; line-height:2em;"><p>Download my Dashboard about YTD Sales and Customer Segmentation: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/5%20-%20Sale%20and%20RFM%20Dashboard" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
+
+      <h2 id="section7" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Fact 3: Customer Cohort Analysis <br> <span style="color: #fec544;">( Using SQL & Tableau )</span></h2>
+      <p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em"> SQL Analysis Scripts </p>
+
+<div id="editor-sql">
+<div  contenteditable="false">
+          SELECT *
+          FROM global_superstore_clean AS g
+          --------------BEGIN COHORT ANALYSIS----------------------------
+          ---Data Required:
+          --Unique Identifier (CustomerID)
+          --Initial Start Date (First	Invoice Date)
+          --Revenue Data (Quantity*UnitPrice)
+          SELECT customer_id,
+              MIN(order_date) AS First_purchase_date,
+              DATEFROMPARTS(YEAR(MIN(order_date)), MONTH(MIN(order_date)),1) AS Cohort_Date
+          into #cohort
+          FROM global_superstore_clean AS g
+          GROUP BY customer_id
+          
+          --Create Cohort index
+          SELECT 
+            mm.*,
+            cohort_index = Year_diff*12+Month_diff+1
+          INTO #cohort_retention 
+          FROM
+            (
+            SELECT
+              m.*,
+              Year_diff = OrderYear - CohortYear,
+              Month_diff = OrderMonth - CohortMonth	
+            FROM
+              (
+              SELECT f.*, c.Cohort_Date,
+                  YEAR(f.order_date) AS OrderYear,
+                  MONTH(f.order_date) AS OrderMonth,
+                  YEAR(c.Cohort_Date) AS CohortYear,
+                  MONTH(c.Cohort_Date) AS CohortMonth
+              FROM global_superstore_clean AS f
+              LEFT JOIN #cohort AS c
+                ON c.customer_id = f.customer_id
+            ) AS m
+          ) AS mm
+          --WHERE CustomerID = 18168
+          ---cohort_retention.csv table--
+          SELECT *
+          FROM #cohort_retention
+          --
+          --Pivot Data to see the cohort table
+          SELECT
+            *
+          INTO #cohort_pivot_table
+          FROM
+            (
+            SELECT DISTINCT 
+                customer_id,
+                Cohort_Date,
+                cohort_index
+            FROM #cohort_retention
+          ) AS TBL
+            PIVOT(
+              COUNT(customer_id)
+              FOR Cohort_Index In 
+              (
+              [1],
+              [2],
+              [3],
+              [4],
+              [5],
+              [6],
+              [7],
+              [8],
+              [9],
+              [10],
+              [11],
+              [12],
+              [13],
+              [14],
+              [15],
+              [16],
+              [17],
+              [18],
+              [19],
+              [20],
+              [21],
+              [22],
+              [23],
+              [24]
+              )
+             ) AS Pivot_Table
+          ORDER BY Cohort_Date
+          
+          --Cohort_table_count
+          SELECT *
+          FROM #cohort_pivot_table
+          ORDER BY Cohort_Date
+          
+          --Cohort_table_percentage
+          select Cohort_Date ,
+            (1.0 * [1]/[1] * 100) as [1], 
+              1.0 * [2]/[1] * 100 as [2], 
+              1.0 * [3]/[1] * 100 as [3],  
+              1.0 * [4]/[1] * 100 as [4],  
+              1.0 * [5]/[1] * 100 as [5], 
+              1.0 * [6]/[1] * 100 as [6], 
+              1.0 * [7]/[1] * 100 as [7], 
+            1.0 * [8]/[1] * 100 as [8], 
+              1.0 * [9]/[1] * 100 as [9], 
+              1.0 * [10]/[1] * 100 as [10],   
+              1.0 * [11]/[1] * 100 as [11],  
+              1.0 * [12]/[1] * 100 as [12],  
+            1.0 * [13]/[1] * 100 as [13],
+            1.0 * [14]/[1] * 100 as [14],
+            1.0 * [15]/[1] * 100 as [15],
+            1.0 * [16]/[1] * 100 as [16],
+            1.0 * [17]/[1] * 100 as [17],
+            1.0 * [18]/[1] * 100 as [18],
+            1.0 * [19]/[1] * 100 as [19],
+            1.0 * [20]/[1] * 100 as [20],
+            1.0 * [21]/[1] * 100 as [21],
+            1.0 * [22]/[1] * 100 as [22],
+            1.0 * [23]/[1] * 100 as [23],
+            1.0 * [24]/[1] * 100 as [24]
+          from #cohort_pivot_table
+          order by Cohort_Date
+          
+</div>
+</div>
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em"> Tableau Dashboard </p>
+<div class="st-slider st-style1">
+  <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-autoplay-timeout="1000" data-center="0" data-slides-per-view="1">
+    <div class="slick-wrapper">
+      <div class="slick-slide-in">
+        <img class="st-zoom-in" src="assets/img/blog/Superstore/cohortcount.PNG" alt="dash1">
+      </div>
+      <div class="slick-slide-in">
+        <img class="st-zoom-in" src="assets/img/blog/Superstore/cohortrate.PNG" alt="dash2">
+      </div>
+      <div class="slick-slide-in">
+        <img class="st-zoom-in" src="assets/img/blog/Superstore//cohortsales.PNG" alt="dash3">
+      </div>
+
+    </div>
+  </div><!-- .slick-container -->
+  <div class="pagination st-style2 "></div> <!-- If dont need Pagination then add class .st-hidden -->
+  <div class="swipe-arrow st-style1 "> <!-- If dont need navigation then add class .st-hidden -->
+    <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+    <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+  </div>
+</div><!-- .st-slider -->
+<blockquote style="font-size: 18px; line-height:2em;"><p>View my Tableau Dashboard about Cohort Analysis: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/6%20-%20Cohort%20Analysis" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
+
+<blockquote style="font-size: 18px; line-height:2em;">
+  <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Analysis:</span></p>
+    <p><span style="font-size: 20px; font-weight:bold; ">1. Retention Rate Over Time:</span></p>
+
+  <ul>
+    <li>All customer groups from 2016 exhibited a consistent trend of <span>decreasing numbers</span> over the course of several months.</li>
+    <li>Initial cohorts <span>began with larger customer counts</span>, but these figures gradually <span>declined over time</span>. This emphasizes the <span>necessity for robust retention and customer acquisition strategies</span>.
+    </li>
+    </ul>
+    <p><span style="font-size: 20px; font-weight:bold; ">2. Engagement Patterns:
+
+    </span></p>
+
+      <ul>
+        <li>There is <span>significant variation</span> in customer numbers across months and cohorts.
+        </li>
+        <li>Certain cohorts experienced an increase during specific periods followed by a decrease. This might reflect <span>marketing campaigns</span> or special events that <span>generated temporary interest</span>.</li>
+      </ul>
+        <p><span style="font-size: 20px; font-weight:bold; ">3. Churn Analysis:
+
+        </span></p>
+
+          <ul>
+            <li>Early cohorts generally <span>maintained lower churn rates</span> compared to their <span>later counterparts</span>.
+            </li>
+            <li>As time progressed, churn rates tended to <span>increase in subsequent cohorts</span>, underlining the <span>importance of strategies</span> to prevent customer attrition.
+            </li>
+          </ul>
+            <p><span style="font-size: 20px; font-weight:bold; ">4. Impact of Marketing Campaigns:</span></p>
+
+              <ul>
+                <li>Several cohorts experienced <span>substantial spikes</span> in customer counts after specific months, which could be linked to strategic marketing campaigns or captivating events.</li>
+              <li>This underlines the <span>efficacy</span> of well-timed and thoughtfully executed <span>marketing endeavors</span>, showcasing their potential to generate transient enthusiasm and engagement among customers.
+              </li>
+              </ul>
+</blockquote>
+<blockquote style="font-size: 18px; line-height:2em;">
+  <p><span style="font-size: 20px; font-weight:bold; text-decoration:underline">Strategies Recommend:</span></p>
+
+  <ul>
+    <li><span>Segmented Retention Campaigns:</span> Tailor retention campaigns based on customer behavior and engagement patterns observed within different cohorts. Offer personalized incentives and rewards to re-engage customers who show signs of waning interest.</li>
+    <li><span>Loyalty Programs:</span> Introduce or enhance loyalty programs that offer exclusive benefits to long-standing customers. This could help counteract the increasing churn rates observed in later cohorts.</li>
+    <li><span>Seasonal Promotions:</span> Leverage the identified seasonal trends by launching targeted promotional campaigns during off-peak months. Encourage customers' participation with limited-time offers or themed events.</li>
+    <li><span>Reactivation Campaigns:</span> Develop strategies to win back customers who have churned, especially focusing on the early cohorts with lower churn rates. Offer enticing incentives or personalized communications to reignite their interest.</li>
+    <li><span>Continuous Engagement Events:</span> Organize periodic engagement events or product launches to sustain customer excitement throughout the year. This can help counteract the cyclical decline in engagement.
+
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="section8" style="justify-content: center; text-align:center; margin-top:2em; margin-bottom: 1em">Fact 4: Forecasting and Predictive model <br> <span style="color: #fec544;">( Using Tableau & Python )</span></h2>
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 1em"> Forecasting in Tableau </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/Forecastingsale.jpg" alt="dash1">
+<blockquote style="font-size: 18px; line-height:2em;"><p>View my Tableau Dashboard about Forecasting Sales: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis/tree/main/7%20-%20Forecasting%20in%20Tableau" target="_blank" style="color: #fec544;text-decoration:underline">Here</a></p></blockquote>
+
+<img class="st-zoom-in" src="assets/img/blog/Superstore/forecastingsalessummary.PNG" alt="dash1">
+<img class="st-zoom-in" src="assets/img/blog/Superstore/modelforecasting.PNG" alt="dash1">
+<blockquote style="font-size: 18px; line-height:2em;">
+<p>Forecast Model with <span>Trend is Additive</span> and <span>Season is Multiplicative</span>, I got the good result that <span style="color:aqua;">MASE = 0.26</span>.
+  <br> That proves the model is well chosen with the data.
+</p>
+</blockquote>
+
+<p style="text-align:center; color:#fec544; font-weight:bold; margin-top: 2em"> Predictive Model for Returned Good </p>
+<p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Set up and Read file</p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/predictsetup.PNG" alt="dash1">
+<p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> EDA Data </p>
+<blockquote style="font-size: 18px; line-height:2em;">
+<p>  In my dataset, there are 3 types of data:
+</p>  
+<li><span>Object</span> Data type</li>
+<li><span>Numeric</span> Data type</li>
+<li><span>Datetime</span> Data type
+</li>
+</blockquote>
+<div id="editor-python2" style="height:260px;font-size:15px">
+  <div contenteditable="false">
+# objectcolumns
+object_cols = [f for f in data.columns if data[f].dtype =="O"]
+print(object_cols)
+
+# numerical columns
+numeric_cols = [f for f in data.columns if data[f].dtype != "O" and data[f].dtype != "datetime64[ns]"]
+print(numeric_cols)
+
+# datetime columns
+date_cols = [f for f in data.columns if data[f].dtype == "datetime64[ns]"]
+print(date_cols)
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/Superstore/datatype.PNG" alt="dash1">
+  <p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Feature Selection </p>
+  <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Categorical Feature </p>
+
+
+  <blockquote style="font-size: 18px; line-height:2em;">
+  <p>  <span>Categorical Features</span> : will be selected from the <span>Object</span> data type columns.
+  </p>  
+  <li>First, <span>delete</span> unused fields such as: <span>order_id, customer_id, customer_name, product_id</span>.</li>
+  <li>In 5 features: city, state, country, region_x, market, select <span style="color: #fec544;">market</span> field as market and drop the remaining fields</li>
+  <li>In 3 fields: product_name, sub_category, category, select <span style="color: #fec544;">category</span> field as category and drop the remaining fields.
+  </li>
+  </blockquote>
+  <div id="editor-pythonRFM" style="height:300px;font-size:15px">
+    <div contenteditable="false">
+# categorical feature
+categorical_features = [ 'ship_mode', 'segment', 'market','category', 'order_priority']
+
+# Visualization for categorical feature
+ROWS, COLS = 2,3
+fig, ax = plt.subplots(ROWS,COLS, figsize=(19,19))
+row, col = 0, 0,
+for i, categorical_feature in enumerate(categorical_features):
+    if col == COLS - 1:
+        row += 1
+    col = i % COLS
+    data[categorical_feature].value_counts().plot(kind='bar', ax=ax[row, col]).set_title(categorical_feature)
+    </div></div>
+    <img class="st-zoom-in" src="assets/img/blog/Superstore/categoricalviz.png" alt="dash1">
+    <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Numerical Feature </p>
+
+    <blockquote style="font-size: 18px; line-height:2em;">
+      <p>  In this project, the datetime feature is order_date and ship_date, corresponding to purchase date and delivery date.
+
+        <br>It can be assumed that items with a large difference between the order date and the ship date will result in returns.
+        
+       <br> Therefore, from order_date and ship_date will generate a new feature called <span>date_diff</span>: <span>the difference between order_date and ship_date</span>
+      </p>  
+    
+      </blockquote>
+    <blockquote style="font-size: 18px; line-height:2em;">
+    <p>  <span>Numerical Features</span> : will be selected from the <span>Numeric</span> data type columns.
+    </p>  
+<li>Delete unused fields such as: <span>row_id</span></li>    
+<li><span>date_diff</span> is a numerical feature</li>    
+
+    </blockquote>
+    <div id="editor-pythonDis" style="height:300px;font-size:15px">
+      <div contenteditable="false">
+  # numerical feature
+  numerical_features= [ 'sales', 'quantity', 'discount', 'profit', 'shipping_cost','date_diff']
+
+  # Distribution Visualization for numerical features
+  fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(18, 10))
+  axes = axes.flatten()
+  
+  # Plot histograms for numerical features
+  for i, col in enumerate(numerical_features):
+      ax = axes[i]
+      data[col].hist(ax=ax)
+      ax.set_title(col)
+      ax.set_xlabel('Value')
+      ax.set_ylabel('Frequency')
+  
+  plt.tight_layout()
+  plt.show()
+      </div></div>
+      <img class="st-zoom-in" src="assets/img/blog/Superstore/numericviz.png" alt="dash1">
+      <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Target Feature </p>
+
+      <blockquote style="font-size: 18px; line-height:2em;">
+        <p>The <span>target feature</span> in this project is <span>returned</span></p> 
+      
+        </blockquote>
+        <div class="grid-container20"><div class="column1"> <img class=" center" src="assets/img/blog/Superstore/targetviz.png" alt="dash1"></div></div>
+        
+<p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Outlier Detection for numerical feature </p>
+<div id="editor-pythonfunction" style="height:630px;font-size:15px">
+  <div contenteditable="false">
+# Function
+def count_outliers(data, col):
+    q1 = data[col].quantile(0.25, interpolation='nearest')
+    q3 = data[col].quantile(0.75, interpolation='nearest')
+    IQR = q3 - q1
+    LLP = q1 - 1.5 * IQR
+    ULP = q3 + 1.5 * IQR
+    
+    lower_outliers = data[data[col] < LLP][col].size
+    upper_outliers = data[data[col] > ULP][col].size
+    
+    if lower_outliers == 0 and upper_outliers == 0:
+        print("No outliers in", col)
+    else:
+        print("There are outliers in", col)
+        print('Count of lower outliers:', lower_outliers)
+        print('Count of upper outliers:', upper_outliers)
+
+# The outlier of numerical features
+numerical_features = ['sales', 'quantity', 'discount', 'profit', 'shipping_cost', 'date_diff']
+
+for feature in numerical_features:
+    count_outliers(data, feature)
+
+# Display the outliers by box - plot
+fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(18, 10))
+axes = axes.flatten()
+
+# Plot box plots for numerical features
+for i, col in enumerate(numerical_features):
+    ax = axes[i]
+    data.boxplot(column=[col], ax=ax)
+    ax.set_title(col)
+    ax.set_ylabel('Value')
+
+plt.tight_layout()
+plt.show()
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/Superstore/outlierbefore.png" alt="dash1">
+  <blockquote style="font-size: 18px; line-height:2em;">
+    <table>
+      <tr>
+        <td>
+          <ul>
+            
+              <ul>
+                <li>Count of lower outliers in sales: <span>0</span></li>
+                <li>Count of upper outliers in sales: <span>5655</span></li>
+                <li>Count of upper outliers in quantity: <span>877</span></li>
+                <li>Count of upper outliers in discount: <span>4172</span></li>
+              </ul>
+            
+          </ul>
+        </td>
+        <td>
+          <ul>
+            
+              <ul>
+                <li>Count of lower outliers in profit: <span>3526</span></li>
+                <li>Count of upper outliers in profit: <span>6229</span></li>
+                <li>Count of upper outliers in shipping_cost: <span>5909</span></li>
+                <li><span>No</span> outliers in date_diff</li>
+              </ul>
+           
+          </ul>
+        </td>
+      </tr>
+    </table>
+      
+    </blockquote>
+    <blockquote style="font-size: 18px; line-height:2em;">
+<p>There are lots of outlier in numerical feature. So it is <span>necessary to tranform</span>!</p>    
+      </blockquote>
+  <p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Transofmation with Log Transofmation </p>
+<div id="editor-pythontrans" style="height:380px;font-size:15px">
+  <div contenteditable="false">
+data_transformed = data[numerical_features]
+
+# Log-Transform
+log_transform_features = ['sales', 'quantity', 'discount', 'profit', 'shipping_cost','date_diff']
+for feature in log_transform_features:
+    data_transformed[feature] = np.log1p(data_transformed[feature])
+
+# check oulier
+for feature in log_transform_features:
+    count_outliers(data_transformed, feature)
+
+# fit data
+log_transform_features = ['sales', 'quantity', 'discount', 'profit', 'shipping_cost','date_diff']
+for feature in log_transform_features:
+    data_transformed[f'{feature}_log'] = np.log1p(data_transformed[feature])
+data_transformed.drop(log_transform_features, axis=1, inplace=True)
+  </div></div>
+  <img class="st-zoom-in" src="assets/img/blog/Superstore/outlierafter.png" alt="dash1">
+
+  <p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Encoder for Categorical feature </p>
+  <div id="editor-pythonscaler" style="height:200px;font-size:15px">
+    <div contenteditable="false">
+# check unique value of categorical features
+for feature in categorical_features:
+    print(feature,data[feature].nunique())
+
+# One hot Encoding for categorical and target feature
+categorical_dummies = pd.get_dummies(data[categorical_features], drop_first=True)
+target_dummy = pd.get_dummies(data['returned'], drop_first=True)
+    </div></div>
+    <img class="st-zoom-in" src="assets/img/blog/Superstore/outlierafter.png" alt="dash1">
+    <p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Final Dataset </p>
+    <div id="editor-pythonelbow" style="height:580px;font-size:15px">
+      <div contenteditable="false">
+# concatenate
+datafinal = pd.concat([categorical_dummies , data_transformed,target_dummy], axis=1)
+
+# View correlation
+corr = datafinal.corr()
+
+fig, ax = plt.subplots(figsize=(10, 10))
+cax = ax.matshow(corr, cmap='coolwarm')
+
+plt.xticks(range(len(corr.columns)), corr.columns, rotation=90)
+plt.yticks(range(len(corr.columns)), corr.columns)
+plt.colorbar(cax)
+
+# Visualization all features
+num_rows = 5
+num_cols = 5
+fig, axes = plt.subplots(num_rows, num_cols, figsize=(15, 15))
+
+features = datafinal.columns
+counter = 0
+
+for row in range(num_rows):
+    for col in range(num_cols):
+        if counter < len(features):
+            axes[row, col].hist(datafinal[features[counter]])
+            axes[row, col].set_title(features[counter])
+            counter += 1
+
+plt.tight_layout()
+plt.show()
+      </div></div>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/corr.png" alt="dash1">
+<img class="st-zoom-in" src="assets/img/blog/Superstore/allfeatureviz.png" alt="dash1">
+
+<p style="text-align:center; color:aqua; font-weight:bold; margin-top: 1em"> Final Dataset </p>
+<p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Split to Train and Test </p>
+<div id="editor-pythonsilhoutte" style="height:220px;font-size:15px">
+  <div contenteditable="false">
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from imblearn.over_sampling import SMOTE
+# Feature selection
+X = datafinal.drop(["Y",'profit_log'], axis=1)
+y = datafinal['Y']
+
+# Split train ,test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+  </div></div>
+  <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Upsampling with SMOTE and Min max Scaler </p>
+  <div id="editor-pythoncluster" style="height:300px;font-size:15px">
+    <div contenteditable="false">
+# Upsampling with SMOTE
+sm = SMOTE(k_neighbors=5)
+X_train_resample, y_train_resample = sm.fit_resample(X_train, y_train)
+
+from sklearn.preprocessing import MinMaxScaler
+# Scaling with Min-Max Scaler
+numeric_columns = ['sales_log', 'quantity_log', 'discount_log',
+       'shipping_cost_log', 'date_diff_log']
+scaler = MinMaxScaler()
+scaler.fit(X_train_resample[numeric_columns])
+X_train_resample[numeric_columns] = scaler.transform(X_train_resample[numeric_columns])
+X_test[numeric_columns] = scaler.transform(X_test[numeric_columns])
+    </div></div>       
+    <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> XGBoost Model Training </p>
+    <div id="editor-pythonviz" style="height:450px;font-size:15px">
+      <div contenteditable="false">
+import xgboost as xgb
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+
+model_xgb = xgb.XGBClassifier(random_state=42, n_estimators=200)
+model_xgb.fit(X_train_resample, y_train_resample)
+y_pred_xgb = model_xgb.predict(X_test)
+
+# Result
+print("XGBoost Report:")
+print(classification_report(y_test, y_pred_xgb))
+
+# Accuracy on Train and Test
+accuracy_train_xgb = model_xgb.score(X_train_resample, y_train_resample)
+accuracy_test_xgb = accuracy_score(y_test, y_pred_xgb)
+print(f"Accuracy on Train: {accuracy_train_xgb:.2f}")
+print(f"Accuracy on Test: {accuracy_test_xgb:.2f}")
+
+# Confusion matrix
+conf_matrix_xgb = confusion_matrix(y_test, y_pred_xgb)
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix_xgb, annot=True, cmap='Blues', fmt='g')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix - XGBoost')
+plt.show()
+      </div></div> 
+      <div class="grid-container21">
+        <div class="column3">
+          
+          <img src="assets/img/blog/Superstore/xgboostmetric.PNG" style="height: 220px" alt="Ảnh 1">
+        </div>
+        <div class="column3">
+          <img src="assets/img/blog/Superstore/xgbooscm.png" alt="Ảnh 1">
+        </div>
+      </div>      
+      <div class="grid-container21" style="margin-top:20px">
+        <div class="column3">
+          <p style="text-align:center; color:#fec544; font-weight:bold"> XGBoost Mectrics </p>
+        </div>
+        <div class="column3">
+          <p style="text-align:center; color:#fec544; font-weight:bold"> XGBoost confusion matrix </p>
+      
+        </div>
+        </div>
+      
+        <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Random Forest Classifier Training </p>
+        <div id="editor-pythongroupby" style="height:450px;font-size:15px">
+          <div contenteditable="false">
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+
+model_rfc = RandomForestClassifier(random_state=42, n_estimators=200)
+model_rfc.fit(X_train_resample, y_train_resample)
+y_pred_rfc = model_rfc.predict(X_test)
+
+# Result
+print("Random Forest Classifier Report:")
+print(classification_report(y_test, y_pred_rfc))
+
+# Accuracy on Train and Test
+accuracy_train_rfc = model_rfc.score(X_train_resample, y_train_resample)
+accuracy_test_rfc = accuracy_score(y_test, y_pred_rfc)
+print(f"Accuracy on Train: {accuracy_train_rfc:.2f}")
+print(f"Accuracy on Test: {accuracy_test_rfc:.2f}")
+
+# Confusion matrix
+conf_matrix_rfc = confusion_matrix(y_test, y_pred_rfc)
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix_rfc, annot=True, cmap='Blues', fmt='g')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix - Random Forest Classifier')
+plt.show()
+          </div></div> 
+          <div class="grid-container21">
+            <div class="column3">
+              
+              <img src="assets/img/blog/Superstore/rfcmetrics.PNG" style="height: 228px" alt="Ảnh 1">
+            </div>
+            <div class="column3">
+              <img src="assets/img/blog/Superstore/rfccm.png" alt="Ảnh 1">
+            </div>
+          </div>      
+          <div class="grid-container21" style="margin-top:20px">
+            <div class="column3">
+              <p style="text-align:center; color:#fec544; font-weight:bold"> Random Forest Classifier Mectrics </p>
+            </div>
+            <div class="column3">
+              <p style="text-align:center; color:#fec544; font-weight:bold"> Random Forest Classifier confusion matrix </p>
+          
+            </div>
+            </div>
+        <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Support Vector Classifier </p>
+        <div id="editor-pythontrain" style="height:500px;font-size:15px">
+          <div contenteditable="false">
+from sklearn.svm import SVC
+
+# Create and train Support Vector Classifier model
+model_svc = SVC(random_state=42)
+model_svc.fit(X_train_resample, y_train_resample)
+
+# Predict on test set
+y_pred_svc = model_svc.predict(X_test)
+
+# Print classification report
+print("Classification Report for Support Vector Classifier:")
+print(classification_report(y_test, y_pred_svc))
+
+# Compute and print accuracy for train and test
+accuracy_train_svc = model_svc.score(X_train_resample, y_train_resample)
+accuracy_test_svc = accuracy_score(y_test, y_pred_svc)
+print(f"Accuracy on train set: {accuracy_train_svc:.4f}")
+print(f"Accuracy on test set: {accuracy_test_svc:.4f}")
+
+# Compute and plot confusion matrix
+conf_matrix_svc = confusion_matrix(y_test, y_pred_svc)
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix_svc, annot=True, cmap='Blues', fmt='g')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix - Support Vector Classifier')
+plt.show()
+          </div></div> 
+          <div class="grid-container21">
+            <div class="column3">
+              
+              <img src="assets/img/blog/Superstore/SVCmetrics.PNG" style="height: 228px" alt="Ảnh 1">
+            </div>
+            <div class="column3">
+              <img src="assets/img/blog/Superstore/svccm.png" alt="Ảnh 1">
+            </div>
+          </div>      
+          <div class="grid-container21" style="margin-top:20px">
+            <div class="column3">
+              <p style="text-align:center; color:#fec544; font-weight:bold"> Support Vector Classifier Mectrics </p>
+            </div>
+            <div class="column3">
+              <p style="text-align:center; color:#fec544; font-weight:bold"> Support Vector Classifier confusion matrix </p>
+          
+            </div>
+            </div>
+            <p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Model Evalutation </p>
+            <div id="editor-pythoneva" style="height:650px;font-size:15px">
+              <div contenteditable="false">
+from sklearn.metrics import f1_score
+import pandas as pd
+
+# List of models
+models = [model_xgb, model_rfc, model_svc]
+
+# List of model names
+model_names = ['XGBoost', 'Random Forest', 'Support Vector Classifier']
+
+# Calculate evaluation metrics for each model
+accuracy = [model.score(X_test, y_test) for model in models]
+train_accuracy = [model.score(X_train, y_train) for model in models]
+f1_scores = [f1_score(y_test, model.predict(X_test)) for model in models]
+
+# Create a dictionary to store evaluation metrics
+evaluation_metrics = {
+    'Model': model_names,
+    'Accuracy': accuracy,
+    'Train Accuracy': train_accuracy,
+    'F1 Score': f1_scores
+}
+
+# Convert the dictionary to a DataFrame
+metrics_df = pd.DataFrame(evaluation_metrics)
+
+# Print the DataFrame
+print(metrics_df)
+
+# Find the model with the highest accuracy and F1-score
+best_accuracy_model = metrics_df.loc[metrics_df['Accuracy'].idxmax(), 'Model']
+best_f1_model = metrics_df.loc[metrics_df['F1 Score'].idxmax(), 'Model']
+
+print(f"Best model based on Accuracy: {best_accuracy_model}")
+print(f"Best model based on F1 Score: {best_f1_model}")
+
+              </div></div>  
+              <div class="grid-container20"><div class="column1"> <img class=" center" src="assets/img/blog/Superstore/modelevars.PNG" alt="dash1"></div></div>
+<blockquote><p>The <span>"Random Forest Classifier Model"</span> has the <span>highest accuracy</span> on the test dataset <span>(Accuracy = 85.19%)</span> and the <span>F1-score is relatively better</span> than the other models.
+ <br> So I will choose this model!</p></blockquote>
+
+ 
+<p style="text-align:center; color:white; font-weight:bold; margin-top: 1em"> Save Model </p>
+<img class="st-zoom-in" src="assets/img/blog/Superstore/savemodel.PNG" alt="dash1">
+<blockquote>View my full project: <a href="https://github.com/phamvanhoangphi13112002/SuperstoreSalesAnalysis" style="color: #fec544; text-decoration:underline" target="_blank">Here</a></blockquote>
+
+
+<!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use passage of Lorem Ipsum.</p>
+<h2>Phosfluorescently engage worldwide?</h2>
+<p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+
+<div class="st-height-b20 st-height-lg-b20"></div>
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+</div> -->
+<div class="st-height-b35 st-height-lg-b35"></div>
+<div class="st-post-meta">
+<div class="st-post-tages">
+  <h4 class="st-post-tage-title">Skill:</h4>
+  <ul class="st-post-tage-list st-mp0">
+    <li><a href="#">Python</a></li>
+    <li><a href="#">SQL</a></li>
+    <li><a href="#">SSIS</a></li>
+
+    <li><a href="#">Power BI</a></li>
+
+    <li><a href="#">Tableau</a></li>
+
+    <li><a href="#">Machine Learning</a></li>
+
+
+    <!-- <li><a href="#">web</a></li>
+    <li><a href="#">business</a></li>
+    <li><a href="#">agency</a></li>
+    <li><a href="#">development</a></li> -->
+  </ul>
+</div>
+<!-- <div class="st-post-share">
+  <h4 class="st-post-share-title">Share:</h4>
+  <div class="st-post-share-btn-list">
+     <a href="#"><i class="fab fa-facebook-f"></i></a> 
+     <a href="#"><i class="fab fa-twitter"></i></a> 
+     <a href="#"><i class="fab fa-behance"></i></a> 
+     <a href="#"><i class="fab fa-instagram"></i></a> 
+     <a href="#"><i class="fab fa-pinterest-p"></i></a>
+  </div>
+</div> -->
+</div>
+
+<div class="st-height-b60 st-height-lg-b60"></div>
+</div>
+<div class="st-post-btn-gropu">
+<a href="./index.html" class="st-btn st-style2 st-color1 st-size-medium">Previous Post</a>
+<a href="./project2.html" class="st-btn st-style2 st-color1 st-size-medium">Next Post</a>
+</div>
+</div>
+<div class="st-height-b60 st-height-lg-b60"></div>
+
+<div class="container" style="margin-top: 3em;">
+  <div class="row">
+    <div class="col-lg-10 offset-md-1">
+      <div class="st-post-details st-style1">
+        <div class="st-social-info" >
+          <div class="st-social-text">Visits my social profile and get connected:</div>
+          <div class="st-social-link">
+            <a href="https://github.com/phamvanhoangphi13112002" class="st-social-btn active" target = '_blank'>
+          <span class="st-social-icon"><i class="fab fab fa-github"></i></span>
+          <span class="st-icon-name">Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/pham-van-hoang-phi-8a439226a/" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fab fa-linkedin"></i></span>
+          <span class="st-icon-name">LinkedIn</span>
+        </a>
+        <a href="https://www.facebook.com/hoangphi1311" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fab fa-facebook-f"></i></span>
+          <span class="st-icon-name">Facebook</span>
+        </a>
+        <a href="mailto:hoangphi1311.gpa@gmail.com" class="st-social-btn", target = '_blank'>
+          <span class="st-social-icon"><i class="fa fa-envelope"></i></span>
+          <span class="st-icon-name">Gmail</span>
+        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top: 3em;">
+  <div class="row">
+    <div class="col-lg-10 offset-md-1">
+      <div class="st-post-details st-style1" style="font-weight: 400; font-size:16px">
+        <footer>
+          <div class="container" style="text-align:center; justify-content:center;   align-items: center;">
+          <div class="st-copyright-wrap text-center" >
+          <div class="st-copyright-text" >© 2023. Designed by HoangPhi. All right reserved.</div>
+          </div>
+          </div>
+          </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Footer Seciton -->
+
+<!-- End Footer Seciton -->
+
+<!-- Scripts -->
+
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/jquery.slick.min.js"></script>
+<script src="assets/js/lightgallery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+<script src="assets/js/ripples.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
